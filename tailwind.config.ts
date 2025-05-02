@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				maroon: {
+					50: '#fdf2f4',
+					100: '#fbe6e9',
+					200: '#f5cfd7',
+					300: '#eba7b6',
+					400: '#e07a91',
+					500: '#cf5570',
+					600: '#b63252',
+					700: '#982440',
+					800: '#800020', // Our primary maroon
+					900: '#71182f',
+					950: '#420a18',
+				},
+				cream: '#F5F5DC',
+				gold: '#D4AF37',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +100,27 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out'
+			},
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'lato': ['Lato', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
